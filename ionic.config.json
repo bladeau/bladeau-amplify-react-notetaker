@@ -1,0 +1,7 @@
+{
+  "name": "amplify-react-notetaker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
