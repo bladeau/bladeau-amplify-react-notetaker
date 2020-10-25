@@ -1,26 +1,33 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
-
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react'
+import React from 'react'
+import ExploreContainer from '../components/ExploreContainer'
+import './Home.css'
+import { AmplifySignOut, withAuthenticator } from '@aws-amplify/ui-react'
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>TEST</IonTitle>
+          <AmplifySignOut />
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
+        <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle size='large'>TEST</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer />
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 
-export default Home;
+export default withAuthenticator(Home)
